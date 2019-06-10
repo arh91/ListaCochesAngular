@@ -1,0 +1,15 @@
+<h2>{{title}}</h2>
+
+<form #formCars="ngForm" (ngSubmit)="onSubmit()">
+  <label>Modelo:</label>
+  <p>
+    <input type="text" name="modelo" #modelo="ngModel" [(ngModel)]="car.modelo" />
+  </p>
+  <label>Precio:</label>
+  <p>
+    <input type="text" name="precio" #precio="ngModel" [(ngModel)]="car.precio" />
+  </p>
+  
+  <input type="submit" value="{{title}}" />
+</form>
+

@@ -1,0 +1,22 @@
+     <h1>Listado de coches</h1>
+     <h2 class="text-center">{{title}}</h2>
+     <div class="loader" *ngIf="loading"></div>
+     <div *ngFor="let car of cars;">
+     
+       <div class="card mb-3" style="width: 20rem;">
+         <img class="card-img-top img-fluid" src="https://www.coches.com/fotos_historicas/seat/Ibiza/high_f320a2d32e2772ec3644767817fd622e.jpg"
+           alt="Card image cap">
+         <div class="card-body">
+           <h4 class="card-title">{{car.modelo}}</h4>
+           <p class="card-text">{{car.precio}}</p>
+           <a [routerLink]="['/car',car._id]" class="btn btn-primary">Ver detalles</a>
+           <a href="#" class="btn btn-primary">Editar</a>
+           <a href="#" class="btn btn-primary">Borrar</a>
+         </div>
+       </div>
+     
+     </div>
+     
+
+
+

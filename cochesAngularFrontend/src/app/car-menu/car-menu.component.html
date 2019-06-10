@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Catálogo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Listado de coches <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/create-car']"> Añadir nuevo coche </a>
+        </li>
+      
+      </ul>
+      <h2 class="text-center">{{title}}</h2>
+
+        <form class="col" #formCars="ngForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+        <label for="modelo">Modelo:</label>
+        <p>
+            <input class="form-control" type="text" id="modelo" name="modelo" #modelo="ngModel" [(ngModel)]="car.modelo" placeholder="modelo de coche"/>
+        </p>
+        </div>
+        <div class="form-group">
+        <label for="precio">Precio:</label>
+        <p>
+            <input class="form-control" type="text" id="precio" name="precio" #precio="ngModel" [(ngModel)]="car.precio" placeholder="precio del coche"/>
+        </p>
+        </div>
+        <button type="submit" class="btn btn-primary">{{title}}</button>
+        </form>
+
+    </div>
+  </nav>
+  
